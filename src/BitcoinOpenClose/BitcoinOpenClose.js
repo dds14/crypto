@@ -6,16 +6,34 @@ export class BitcoinOpenClose extends Component {
     super(props);
 
     this.state = {
-      BitcoinPrice: 0,
-      XlmPrice: 0,
-      BatPrice: 0
+      bitcoinCoinName: "",
+      bitcoinDayOpen: 0
     };
+  }
+
+  componentDidMount() {
+    axios
+      .get(
+        "https://api.nomics.com/v1/dashboard?key=5f031f3c4f276ef2b4f4f3fbf2703f08"
+      )
+      .then(response => {
+        // console.log(response);
+        for (let i = 0; i < response.data.length; i++) {
+          if (response.data[i].currency === "BTC") {
+            let newCoinName = response.data[i].currency;
+            let newCoinOpen = response.data[i].dayOpen;
+            this.setState({ bitcoinDayOpen: newCoinOpen });
+            this.setState({ bitcoinCoinName: newCoinName });
+          }
+        }
+      });
   }
 
   render() {
     return (
       <div>
-        <h1>Hey</h1>
+        <h1>The opening price of {this.state.bitcoinCoinName}</h1>
+        <h1>{this.state.bitcoinDayOpen}</h1>
       </div>
     );
   }

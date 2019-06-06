@@ -20,11 +20,11 @@ export class BitcoinPrice extends Component {
       )
       .then(response => {
         console.log(response);
-        let BitcoinPrice = response.data[152].price;
+        let BitcoinPrice = response.data[140].price;
         this.setState({ BitcoinPrice });
-        let XlmPrice = response.data[1078].price;
+        let XlmPrice = response.data[1051].price;
         this.setState({ XlmPrice });
-        let BatPrice = response.data[79].price;
+        let BatPrice = response.data[75].price;
         this.setState({ BatPrice });
       });
   }
