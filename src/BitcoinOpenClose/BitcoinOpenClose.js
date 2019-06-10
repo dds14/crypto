@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-export class BitcoinOpenClose extends Component {
+export default class BitcoinOpenClose extends Component {
   constructor(props) {
     super(props);
 

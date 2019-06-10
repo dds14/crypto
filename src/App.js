@@ -1,14 +1,17 @@
 import React from "react";
-import logo from "./logo.svg";
+import { HashRouter, Route } from "react-router-dom";
 import "./App.css";
-import { BitcoinPrice } from "./BitcoinPrice/BitcoinPrice";
+import routes from "./routes";
+import BitcoinOpenClose from "./BitcoinOpenClose/BitcoinOpenClose";
 
 function App() {
   return (
-    <div className="App">
-      <h1>HELLO, BITCOIN</h1>
-      <BitcoinPrice />
-    </div>
+    <HashRouter>
+      <div className="App">
+        <BitcoinOpenClose />
+        {routes}
+      </div>
+    </HashRouter>
   );
 }
 

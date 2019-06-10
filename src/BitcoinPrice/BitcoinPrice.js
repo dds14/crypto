@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { BitcoinOpenClose } from "../BitcoinOpenClose/BitcoinOpenClose";
 
 export class BitcoinPrice extends Component {
   constructor(props) {
@@ -38,7 +37,6 @@ export class BitcoinPrice extends Component {
         <h2>{this.state.XlmPrice}</h2>
         <h1>The Current Price Of BAT Is:</h1>
         <h2>{this.state.BatPrice}</h2>
-        <BitcoinOpenClose />
       </div>
     );
   }
