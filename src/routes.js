@@ -1,13 +1,10 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import BitcoinOpenClose from "./BitcoinOpenClose/BitcoinOpenClose";
-import MoonOrDead from "./MoonOrDead/MoonOrDead";
-import { BitcoinPrice } from "./BitcoinPrice/BitcoinPrice";
+import BitcoinOpenClose from "./Components/BitcoinOpenClose/BitcoinOpenClose";
+import { Prices } from "./Components/Prices/Prices";
 
 export default (
   <Switch>
-    {/* <Route path="/open-close" component={BitcoinOpenClose} /> */}
-    <Route path="/prices" component={BitcoinPrice} />
-    <Route exact path="/" component={BitcoinOpenClose} />
+    <Route exact path="/" component={Prices} />
   </Switch>
 );

@@ -2,13 +2,14 @@ import React from "react";
 import { HashRouter, Route } from "react-router-dom";
 import "./App.css";
 import routes from "./routes";
-import BitcoinOpenClose from "./BitcoinOpenClose/BitcoinOpenClose";
+import BitcoinOpenClose from "./Components/BitcoinOpenClose/BitcoinOpenClose";
+import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   return (
     <HashRouter>
       <div className="App">
-        <BitcoinOpenClose />
+        <Navbar />
         {routes}
       </div>
     </HashRouter>
