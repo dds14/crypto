@@ -21,10 +21,10 @@ export class SearchACoin extends Component {
       <div className="entire-search-div">
         <h1>Search Our Universe Of Coins</h1>
         <div>
-          <form autocomplete="off" onSubmit={this.handleSubmit}>
+          <form>
             <input
               placeholder="Coin Ticker (ex: BTC)"
-              name="coin"
+              name="tickerBeingSearched"
               onChange={this.handleChange}
               value={this.state.tickerBeingSearched}
             />
