@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./BitcoinOpenClose.scss";
 
 export default class BitcoinOpenClose extends Component {
   constructor(props) {
@@ -31,7 +32,7 @@ export default class BitcoinOpenClose extends Component {
 
   render() {
     return (
-      <div>
+      <div className="entire-open-close">
         <h1>The opening price of {this.state.bitcoinCoinName}</h1>
         <h1>{this.state.bitcoinDayOpen}</h1>
       </div>

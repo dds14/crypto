@@ -15,9 +15,18 @@ export default class Navbar extends Component {
     return (
       <div className="entire-navbar">
         <div className="right-side">
-          <p>pines</p>
-          <p>nirvana</p>
-          <p>trees</p>
+          <Link to="/">
+            <p className="home-text">Home</p>
+          </Link>
+          <Link to="/prices">
+            <p className="prices-text">Prices</p>
+          </Link>
+          <Link to="/open-close">
+            <p>open - close</p>
+          </Link>
+          <Link to="search-a-coin">
+            <p>Search</p>
+          </Link>
         </div>
       </div>
     );
